@@ -1,7 +1,17 @@
 {
   "extends": "../../tslint.json",
   "rules": {
-    "directive-selector": [true, "attribute", "chatApp", "camelCase"],
-    "component-selector": [true, "element", "chat-app", "kebab-case"]
+    "directive-selector": [
+      true,
+      "attribute",
+      "chatApp",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "chat-app",
+      "kebab-case"
+    ]
   }
 }

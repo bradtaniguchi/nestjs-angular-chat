@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Req, Res } from '@nestjs/common';
 
 import { Message } from '@chat-app/api-interfaces';
 
@@ -6,10 +6,9 @@ import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  constructor(private readonly appService: AppService) { }
 
-  @Get('hello')
-  getData(): Message {
-    return this.appService.getData();
+  @Post('login')
+  login(@Req() req: Request) {
   }
 }

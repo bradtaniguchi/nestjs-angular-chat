@@ -13,8 +13,11 @@
       "prefix": "chat-app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-builders/custom-webpack:browser",
           "options": {
+            "customWebpackConfig": {
+              "path": "./webpack.config.js"
+            },
             "outputPath": "dist/apps/chat-app",
             "index": "apps/chat-app/src/index.html",
             "main": "apps/chat-app/src/main.ts",
@@ -60,7 +63,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "@angular-builders/custom-webpack:dev-server",
           "options": {
             "browserTarget": "chat-app:build",
             "proxyConfig": "apps/chat-app/proxy.conf.json"
